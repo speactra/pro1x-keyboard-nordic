@@ -7,7 +7,9 @@ Sailfish OS. It matches the keyboard's printed legends and appears as a separate
 The package adds its own layout, registration and services. It does not replace
 `xkeyboard-config`, modify the kernel or patch existing Sailfish program files.
 
-### Development & AI Disclosure
+![nordic_keyboard](./nordic_keyboard_qx1050.png)
+
+## Development & AI Disclosure
 
 This project was created primarily for my own use and is shared publicly in case others find it useful.
 
