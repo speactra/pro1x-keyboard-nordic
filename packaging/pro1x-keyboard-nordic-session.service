@@ -1,0 +1,22 @@
+[Unit]
+Description=Pro1 X Nordic physical layout session watcher
+Requires=dbus.socket
+After=dbus.socket
+Before=user-session.target
+PartOf=user-session.target
+
+[Service]
+Type=notify
+NotifyAccess=main
+WatchdogSec=20
+TimeoutStartSec=20
+ExecStart=/usr/bin/python3 /usr/lib/pro1x-keyboard-nordic/session_agent.py watch
+Restart=on-failure
+RestartSec=2
+TimeoutStopSec=15
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+NoNewPrivileges=yes
+
+[Install]
+WantedBy=user-session.target

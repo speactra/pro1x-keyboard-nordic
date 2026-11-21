@@ -1,0 +1,28 @@
+[Unit]
+Description=Pro1 X Nordic physical keyboard modifier coordinator
+After=systemd-logind.service
+Wants=systemd-logind.service
+
+[Service]
+Type=notify
+ExecStart=/usr/bin/python3 /usr/lib/pro1x-keyboard-nordic/service_runtime.py daemon
+ExecStopPost=/usr/bin/python3 /usr/lib/pro1x-keyboard-nordic/service_runtime.py recover
+Restart=on-failure
+RestartSec=2
+WatchdogSec=20
+TimeoutStartSec=20
+TimeoutStopSec=20
+RuntimeDirectory=pro1x-keyboard-nordic
+RuntimeDirectoryMode=0755
+StateDirectory=pro1x-keyboard-nordic
+StateDirectoryMode=0700
+Environment=PYTHONDONTWRITEBYTECODE=1
+Environment=PYTHONUNBUFFERED=1
+NoNewPrivileges=yes
+ProtectSystem=full
+ProtectHome=yes
+PrivateTmp=yes
+RestrictAddressFamilies=AF_UNIX
+
+[Install]
+WantedBy=multi-user.target

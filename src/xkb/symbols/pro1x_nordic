@@ -1,0 +1,40 @@
+// Nordic key legends for the F(x)tec Pro1 X physical keyboard.
+// White: base/Shift. Yellow: right AltGr. Left yellow retains level five.
+// Direct accents intentionally do not compose with the next letter.
+default partial alphanumeric_keys modifier_keys
+xkb_symbols "basic" {
+    include "se(basic)"
+    replace key <RTSH> { type[Group1]="ONE_LEVEL", [ ISO_Level5_Shift ] };
+    modifier_map Mod3 { <RTSH> };
+    key <AE01> { [ 1, exclam, exclam, onesuperior ] };
+    key <AE02> { [ 2, quotedbl, quotedbl, twosuperior ] };
+    key <AE03> { [ 3, numbersign, numbersign, threesuperior ] };
+    key <AE04> { [ 4, EuroSign, EuroSign, dollar ] };
+    key <AE05> { [ 5, percent, percent, cent ] };
+    key <AE06> { [ 6, ampersand, ampersand, yen ] };
+    key <AE07> { [ 7, slash, slash, division ] };
+    key <AE08> { [ 8, parenleft, parenleft, bracketleft ] };
+    key <AE09> { [ 9, parenright, parenright, bracketright ] };
+    key <AE10> { [ 0, equal, equal, braceright ] };
+    key <AE11> { [ plus, question, question, backslash ] };
+    key <AE12> { [ acute, grave, grave, acute ] };
+    key <AD01> { [ q, Q, section, onehalf ] };
+    key <AD02> { [ w, W, at, at ] };
+    key <AD03> { [ e, E, dollar, EuroSign ] };
+    key <AD04> { [ r, R, degree, degree ] };
+    key <AD07> { [ u, U, braceleft, braceleft ] };
+    key <AD08> { [ i, I, bracketleft, bracketleft ] };
+    key <AD09> { [ o, O, bracketright, bracketright ] };
+    key <AD10> { [ p, P, braceright, braceright ] };
+    key <AD11> { [ aring, Aring, backslash, backslash ] };
+    key <AD12> { [ diaeresis, asciicircum, asciicircum, asciicircum ] };
+    key <AC08> { [ k, K, asterisk, asterisk ] };
+    key <AC09> { [ l, L, apostrophe, apostrophe ] };
+    key <AC11> { [ adiaeresis, Adiaeresis, ae, AE ] };
+    key <TLDE> { type[Group1]="FOUR_LEVEL", [ less, greater, greater, bar ] };
+    key <AB01> { [ z, Z, bar, bar ] };
+    key <AB06> { [ n, N, asciitilde, asciitilde ] };
+    key <AB08> { [ comma, semicolon, semicolon, semicolon ] };
+    key <AB09> { [ period, colon, colon, colon ] };
+    key <AB10> { type[Group1]="EIGHT_LEVEL_ALPHABETIC", [ minus, underscore, underscore, underscore, odiaeresis, Odiaeresis, oslash, Oslash ] };
+};
